@@ -1,0 +1,17 @@
+{
+  "Student 1": {
+    "Parcial 1 (20%):": 1.5,
+    "Parcial 2 (20%):": 4.7,
+    "Parcial 3 (20%):": 3.0
+  },
+  "Student 2": {
+    "Parcial 1 (20%):": 1.5,
+    "Parcial 2 (20%):": 4.7,
+    "Parcial 3 (20%):": 3.0
+  },
+  "Student 3": {
+    "Parcial 1 (20%):": 5.0,
+    "Parcial 2 (20%):": 1.7,
+    "Parcial 3 (20%):": 2.0
+  }
+}
