@@ -78,17 +78,23 @@ def average_calculus(estudiantes, user): #funct to calculate the average grade
     return promedio
 
 def close_assignature(estudiantes):
-    user = input("Choose the student: ")
-    promedio = average_calculus(estudiantes, user)
-    
-    if user not in estudiantes:
+
+    if not estudiantes:
         print("No students registered")
         return
     
-    if promedio >= 3.0:
-        print(f"{user} passed the assignature, definitive {promedio:.2f}")
-    else:
-        print(f"{user} didnt pass the assignature, definitive {promedio:.2f}")
+    # Un solo ciclo para recorrer a todos los estudiantes
+    for user, grades in estudiantes.items(): 
+        # grades es el diccionario interno, e.g., {"Parcial 1": 1.5, ...}
+        notas = grades.values()
+        promedio = sum(notas) / len(notas)
+        
+        if promedio >= 3.0:
+            status = "PASSED"
+        else:
+            status = "FAILED"
+            
+        print(f"Student: {user:12} | Final Grade: {promedio:.2f} | Status: {status}")
 
 
 
